@@ -12,18 +12,24 @@ class PageTwo extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ElevatedButton(
+            TextButton.icon(
               onPressed: () {},
-              child: const Text('Set user'),
+              icon: const Icon(
+                Icons.playlist_add_check_sharp,
+              ),
+              label: const Text('Set user'),
             ),
-            ElevatedButton(
+            TextButton.icon(
               onPressed: () {},
-              child: const Text('Modify age'),
+              icon: const Icon(Icons.edit_sharp),
+              label: const Text('Modify age'),
             ),
-            ElevatedButton(
+            TextButton.icon(
               onPressed: () {},
-              child: const Text('Add profession'),
+              icon: const Icon(Icons.add),
+              label: const Text('Add profession'),
             )
           ],
         ),
