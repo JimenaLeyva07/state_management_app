@@ -1,12 +1,19 @@
 class UserModel {
   const UserModel({
     required this.name,
-    required this.age,
+    this.age,
     required this.professions,
   });
 
+  factory UserModel.empty() {
+    return const UserModel(
+      name: '',
+      professions: [],
+    );
+  }
+
   final String name;
-  final int age;
+  final int? age;
   //no se debe guardar la edad. Se debe guardar la fecha de nac
   //y calcular la edad
   final List<String> professions;
